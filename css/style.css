@@ -1,0 +1,58 @@
+h1 {
+	font-family: Helvetica;
+	font-size:1.2em;
+	text-align: left;
+	font-weight: normal;
+}
+
+h2{
+	text-align: left;
+}
+
+h4{
+	text-align: left;
+}
+
+p {
+	text-align: left
+}
+
+a.imagelink{
+	float:left;
+	margin-right: 20px
+}
+a:link {color:darkgrey;}      /* unvisited link */
+a:visited {color:darkgrey;}  /* visited link */
+a:hover {color:darkgrey;}  /* mouse over link */
+a:active {color:darkgrey;}
+
+.post{
+	float:left;
+	margin-bottom: 15px
+}
+
+#pagehead{
+	border-bottom: 1px
+}
+
+.navlink {
+	text-decoration: none
+}
+
+.navlist{
+	list-style: none;
+	text-align:left;
+}
+
+.nav{
+	float:left;
+	width: 180px;
+	position: fixed;
+	padding-top: 40px;
+	margin-left:20px;
+}
+
+.main{
+	width:70%;
+	float:right;
+}
