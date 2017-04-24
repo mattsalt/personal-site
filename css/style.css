@@ -1,5 +1,9 @@
-h1 {
+html{
 	font-family: Helvetica;
+	background-color: white;
+}
+
+h1 {
 	font-size:1.2em;
 	text-align: left;
 	font-weight: normal;
@@ -11,6 +15,7 @@ h2{
 
 h4{
 	text-align: left;
+	border-bottom: 1px;
 }
 
 p {
@@ -21,10 +26,34 @@ a.imagelink{
 	float:left;
 	margin-right: 20px
 }
+
 a:link {color:darkgrey;}      /* unvisited link */
 a:visited {color:darkgrey;}  /* visited link */
 a:hover {color:darkgrey;}  /* mouse over link */
 a:active {color:darkgrey;}
+
+
+.page{
+	width: 80%;
+	margin: auto;
+	min-width: 1050px;
+	max-width: 1420px;
+}
+
+.nav{
+	float:left;
+	width: 220px;
+	position: fixed;
+	padding-top: 60px;
+}
+
+.main{
+	/*width:79%;*/
+	float:right;
+	max-width: 1200px;
+	min-width: 830px;
+	margin-left:  220px;
+}
 
 .post{
 	float:left;
@@ -44,15 +73,5 @@ a:active {color:darkgrey;}
 	text-align:left;
 }
 
-.nav{
-	float:left;
-	width: 180px;
-	position: fixed;
-	padding-top: 40px;
-	margin-left:20px;
-}
 
-.main{
-	width:70%;
-	float:right;
-}
+

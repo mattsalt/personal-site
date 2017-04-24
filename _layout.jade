@@ -4,24 +4,28 @@ html
     title Matthew Salt's Programming Site
     link(rel="stylesheet" href="/main.css")
     link(rel="stylesheet" href="/css/style.css")
+    | <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>  
   body
-    div.nav#left
-        ul.navlist
-          li
-            a.navlink(href="/index.html") Home
-          li
-            a.navlink(href="/pages/projects.html") Projects
-          li
-            a.navlink(href="/pages/about.html") About
-          li
-            a.navlink(href="/pages/contact.html") Contact
-        div(style="text-align:left")
-            a(href="https://www.linkedin.com/in/matthew-salt-4b674328/") linkedin
-            br
-            a(href="https://github.com/mattsalt") GitHub
+    div.page
+      div.nav#left
+          img(src="/img/profile.png" height="200" width="200" style="padding-right:20px")
+          ul.navlist
+            li
+              a.navlink(href="/index.html") Home
+            li
+              a.navlink(href="/pages/projects.html") Projects
+            li
+              a.navlink(href="/pages/about.html") About
+            li
+              a.navlink(href="/pages/contact.html") Contact
+          div(style="text-align:left")
+              //- a(href="https://www.linkedin.com/in/matthew-salt-4b674328/") linkedin
+              //- br
+              a(href="https://github.com/mattsalt")
+                img(src="/img/GitHub-Mark-32px.png") 
 
-    div.main#right
-      != yield
+      div.main#right
+        != yield
 
- //- footer
-  p This site is a simple static site powered by harp using jade templates.
+   //- footer
+    p This site is a simple static site powered by harp using jade templates.
