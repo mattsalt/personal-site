@@ -37,7 +37,7 @@ a.imagelink{
 a:link {color:darkgrey;}      /* unvisited link */
 a:visited {color:darkgrey;}  /* visited link */
 a:hover {color:darkgrey;}  /* mouse over link */
-a:active {color:darkgrey;}
+a:active {color:pink;}
 
 /* Nav bar styling */
 div.topnav{
@@ -73,8 +73,8 @@ div.topnav{
 	height: 330px;
 }
 
-.floatright{
-	float:right;
+.floatleft{
+	float:left;
 	margin:10px;
 }
 
