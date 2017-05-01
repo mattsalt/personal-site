@@ -1,48 +1,44 @@
-h1 Projects
-hr
-div.post
-  h2 My Travel Updates
-  a.imagelink(href="https://www.mytravelupdates.co.uk")
-     img(src='/img/mytravupscreenshot.png' height="145" width="216")
+div.bodydiv
+ div
+    h1 Selected Projects
+    p Below is a selection of some of things I've worked on outside of my work at Citigroup ranging from iOS apps to nodejs applications and js modules.
+ hr
+ div
+  div.my-wrapper.floatright
+   a(href="https://www.npmjs.com/package/national-rail-darwin")
+    img(src='/img/natraildar.png' height="216" width="300" title="national-rail-darwin npm home page")
+   div.caption
+     span.caption-header Darwin
+     p.caption-body js module for talking to National Rail's SOAP api. Returns JSON objects.
 
-  p A node.js based site that lets you schedule train updates via twitter or email. Hooks into National Rail's Darwin api to get information about a specific train at the set time. The status of the train is then sent to you via a twitter dm or email. 
-hr
-div.post
-  h2 Train Board
-  a.imagelink(href="#")
-   img(src='/img/trainboard.png' height="320" width="200")
-  p iOS application that provides a live train information from National Rail between two stations. As I commute into London I use this every day to check if there are any delays and to check which platform my train will depart from. You can find it on the #[a(href="#") app store]
-hr
-div.post
-  h2 National-rail-darwin
-  a.imagelink(href="https://www.npmjs.com/package/national-rail-darwin")
-   img(src='/img/natraildar.png' height="145" width="216")
-  p My first attempt at publishing a module for npm. I took the code that I was using to talk to national rail's SOAP based Darwin API for mytravelupdates.co.uk and made it into a standalone module so other people don't have to deal with the soap headers. This was very useful for developing the back end for my Train Board app. Download it from #[a(href="https://www.npmjs.com/package/national-rail-darwin") npm] or #[a(href="https://github.com/mattsalt/national-rail-darwin") GitHub].
-hr
-div.post
-  h2 Clockly
-  a.imagelink(href="https://github.com/mattsalt/clockly")
-   img(src='/img/clocklyanalog.png' height="200" width="200")
-  p This was my first swift app for macOS. A colleague commented that he could add multiple clocks in Windows by default but not in mac. I thought it sounded interesting and a quick app store search showed a few applications already doing this. However as I am in the process of learning swift and wanted to try my hand at a macOS application I decided to roll my own as a learning exercise. This is the (slightly unpolished) result. Available on #[a(href="https://github.com/mattsalt/clockly") GitHub].
-hr
-div.post
-  h2 Open link in duplicate tab
-  a.imagelink(href="https://chrome.google.com/webstore/detail/open-link-in-duplicate-ta/decochkhfdfamopdemciggmhlgdcdndm")
-   img(src='/img/open-link-in-duplicate.png' height="145" width="216")
-  p This is an extension for the Chrome browser that adds a context menu item to open a link in a duplicate tab. This opens the link in a new tab but keeps the browser history of the current tab. When researching things online I quite often ended up with 10s of tabs open with different items that I would want to look at later. When returning to these tabs I would quite often forget the search path that got me to that tab. With this extension I can see exactly how I got to each tab. I'm not sure if anybody else has this problem but if they do it's availalbe on the #[a(href="https://chrome.google.com/webstore/detail/open-link-in-duplicate-ta/decochkhfdfamopdemciggmhlgdcdndm") Chrome web store] or on #[a(href="https://github.com/mattsalt/chrome-open-link-in-duplicate-tab") GitHub].
-hr
-div.post
-  h2 BTL Calculator
-  a.imagelink(href="https://itunes.apple.com/us/app/btl-profit-calculator/id1195428899?ls=1&mt=8")
-   img(src='/img/btlcalc.jpeg' height="320" width="200")
-  p Calculates an estimate of profit/loss for a buy to let property taking into account the latest government tax changes. This was the first project I wrote using swift and I wanted to create a simple single page application to experiment with the app lifecyle and the different UI controls available in iOS. Available on the #[a(href="https://itunes.apple.com/us/app/btl-profit-calculator/id1195428899?ls=1&mt=8") app store].
-hr
+  
+  div.my-wrapper.floatright
+   img(src='/img/mytravupscreenshot.png' height="216" width="300" title="national-rail-darwin npm home page")
+   div.caption
+     span.caption-header mytravelupdates
+     p.caption-body Provides schedule train status updates for a specific trains via email or twitter direct messages.
+  
+  div.my-wrapper.floatright
+   img(src='/img/trainboard.png' height="216" width="300" title=" national-rail-darwin npm home page")
+   div.caption(style="color:#555555")
+     span.caption-header TrainBoard
+     br
+     p.caption-body 
+ div
+  div.my-wrapper.floatright
+   img(src='/img/btlcalc.jpeg' height="216" width="300" title="national-rail-darwin npm home page")
+   div.caption
+     span.caption-header BTL Calculator
+     p.caption-body Simple iOS app to estimate the profit on a rented property.
 
-div.post
-  h2 AnalogClock
-  a.imagelink(href="https://github.com/mattsalt/AnalogClock")
-   img(src='/img/analogclock.png' height="145" width="200")
-  p For clockly I needed to draw an analog clock in swift. I thought it might be useful for other projects so I extracted it out into its own swift file. It's available on #[a(href="https://github.com/mattsalt/AnalogClock") GitHub]
-hr
+  div.my-wrapper.floatright
+   img(src='/img/analogclock.png' height="216" width="300" title="analog clock")
+   div.caption
+     span.caption-header Analog Clock
+     p.caption-body Swift 3 class for a customizable analog clock face for macOS and iOS.
 
-
+  div.my-wrapper.floatright
+   img(src='/img/open-link-in-duplicate.png' height="216" width="300" title="national-rail-darwin npm home page")
+   div.caption
+     span.caption-header Open Link in Duplicate Tab
+     p.caption-body Extension for the Chrome broswer that allows you to open a link in a new tab with the current tabs browsing history.
