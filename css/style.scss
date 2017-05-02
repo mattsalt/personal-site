@@ -1,6 +1,17 @@
-html{
-	font-family: Helvetica;
+$site-font: Helvetica;
+$caption-height: 330px;
+$caption-width: 300px;
+$site-colour: #555555;
+
+$header-text-size:18px;
+$body-text-size:15px;
+
+html body{
+	font-family: $site-font;
 	background-color: white;
+	margin: 0px;
+	padding: 0px;	
+
 }
 
 h1 {
@@ -25,7 +36,7 @@ p {
 .bodydiv{
 	width:80%;
 	max-width: 1200px;
-	min-width: 930px;
+	// min-width: 930px;
 	margin: auto
 }
 
@@ -52,7 +63,7 @@ div.topnav{
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px
+  font-size: 18px
 }
 
 .topnav a.active {
@@ -69,8 +80,8 @@ div.topnav{
 
 .my-wrapper{
 	border:1px solid lightgrey;
-	width:300px;
-	height: 330px;
+	width: $caption-width;
+	height: $caption-height;
 }
 
 .floatleft{
@@ -79,7 +90,7 @@ div.topnav{
 }
 
 div.caption{
-	color:#555555;
+	color:$site-colour;
 	margin: 5px
 }
 
