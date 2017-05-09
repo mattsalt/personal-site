@@ -9,7 +9,9 @@ $.fn.inView = function(){
     var visibleArea = win.scrollTop() + win.height();
     //the end of the object to check
     var objEndPos = (obj.offset().top + obj.outerHeight());
-    return(visibleArea >= objEndPos && scrollPosition <= objEndPos ? true : false)
+    console.log(visibleArea +' ' + objEndPos)
+    console.log(scrollPosition)
+    return(visibleArea >= objEndPos && (scrollPosition + 40)<= objEndPos ? true : false)
 };
 
 
