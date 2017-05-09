@@ -97,9 +97,15 @@ div.topnav{
 	margin:10px;
 }
 
+ a {
+	text-decoration:none;
+
+}
+
 div.caption{
 	color:$site-colour;
-	margin: 5px
+	margin: 5px;
+
 }
 
 span.caption-header{
