@@ -2,15 +2,15 @@ doctype
 html
   head
     title Matthew Salt's Programming Site
-    link(rel="stylesheet" href="/main.css")
     link(rel="stylesheet" href="/css/style.css")
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+    script(src="/js/project.js")
   body
       div.topnav
-        a(href="/index.html") Home
-        a(href="/pages/about.html") About Me
-        a(href="/pages/projects.html") Projects
+        a#aboutlink(href="#about") About Me
+        a#projectslink(href="#projects") Projects
         a(href="https://www.linkedin.com/in/matthew-salt-4b674328/" style="float:right") Linkedin
         a(href="https://github.com/mattsalt" style="float:right") GitHub
-      div
+      div(style="display:block;padding:45px;")
         != yield
 
