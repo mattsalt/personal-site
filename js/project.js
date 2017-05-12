@@ -12,9 +12,15 @@ $.fn.inView = function(){
 $(window).scroll(function(){
     if($("#about").inView()) {
         $("#aboutlink").addClass("active")   
-        $("#projectslink").removeClass("active")   
+        $("#projectslink").removeClass("active")  
+        $("#contactlink").removelass("active")  
     } else if($("#projects").inView()) {
-        $("#aboutlink").removeClass("active")   
+        $("#aboutlink").removeClass("active") 
         $("#projectslink").addClass("active")  
+        $("#contactlink").removeClass("active")  
+    }else if($("#contact").inView()) {
+        $("#aboutlink").removeClass("active")   
+        $("#projectslink").removeClass("active")
+        $("#contactlink").addClass("active")  
     }
 });

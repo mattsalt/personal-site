@@ -1,6 +1,0 @@
-Train Board gives you quick access to live train statuses between two national rail stations. Check for delays, cancellations or just to check which platform you train will depart from. Bookmark regular journey, such as a commute for even quicker access. 
-
-In the detail view you can see how many carriages a particular service have (if the train operator makes this available) and also the expected arrival time at all future calling points.
-
-This app shows information direct from National Rail so will show you the same information as the departure board at your local station.
-
