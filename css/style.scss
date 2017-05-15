@@ -80,9 +80,15 @@ div.topnav{
   color: black;
 }
 
+/* Margin/Padding hack to account for scroll bar when nav scrolling*/
 #about{
 	margin-top: -40px;
 	padding-top: 40px;
+}
+
+#projects{
+	margin-top: -60px;
+	padding-top:60px;
 }
 
 /*Selected projects styles*/

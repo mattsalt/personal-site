@@ -3,8 +3,6 @@ html
   head
     title Matthew Salt's Programming Site
     link(rel="stylesheet" href="/css/style.css")
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js')
-    script(src="/js/project.js")
   body
       div.topnav
         a#aboutlink(href="#about") About Me
@@ -14,4 +12,5 @@ html
         a(href="https://github.com/mattsalt" style="float:right") GitHub
       div(style="display:block;padding:45px;")
         != yield
+  script(src="/js/project.js")
 
