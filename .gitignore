@@ -2,3 +2,4 @@ www/
 *.log
 *.pem
 .bitballon
+_deploy_via_scp.sh

@@ -23,8 +23,11 @@ var updateLinks = function(){
     }
 }
 
-$(window).scroll(updateLinks);
+$(window).scroll(function(){
+    updateLinks()
+});
 
 $(document).ready(function(){
+    console.log('active link')
     $("#aboutlink").addClass("active") 
 })
