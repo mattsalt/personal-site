@@ -16,6 +16,10 @@ html body{
 	padding: 0px;	
 }
 
+.in-transition{
+    transition: transform 500ms ease-in-out
+}
+
 h1 {
 	font-size:1.4em;
 	text-align: left;

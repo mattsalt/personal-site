@@ -1,3 +1,5 @@
+
+
 var getHeight = function(){
     //window.innerHeight IE9+. Height (in pixels) of the browser window viewport including, if rendered, the horizontal scrollbar.
     return window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
@@ -9,6 +11,35 @@ var getScrollTop = function(){
                                               : (document.documentElement || document.body.parentNode || document.body).scrollTop
 }
 
+var smoothScroll = function(event){
+    targetOffset = document.getElementById(event.target.hash.substr(1)).offsetTop;
+    currentPosition = getScrollTop();
+    bodyHeight = document.body.getBoundingClientRect().height
+    targetHeight = document.getElementById(event.target.hash.substr(1)).getBoundingClientRect().height
+    if(currentPosition + (targetOffset - currentPosition) + window.innerHeight > bodyHeight){
+        scrollDistance = (bodyHeight - window.innerHeight) - currentPosition
+    }else{
+        scrollDistance = targetOffset - currentPosition
+    }
+    
+    document.body.classList.add('in-transition')
+
+    document.body.style.WebkitTransform = "translate(0, " + -(scrollDistance) + "px)"
+    document.body.style.MozTransform = "translate(0, " + -(scrollDistance) + "px)"
+    document.body.style.transform = "translate(0, " + -(scrollDistance) + "px)"
+
+    window.setTimeout(function(){
+        document.body.classList.remove("in-transition")
+        document.body.style.cssText = "";
+        window.scrollTo(0, targetOffset)
+    },  900)
+
+    event.preventDefault()
+}
+
+Array.prototype.forEach.call(document.getElementsByClassName("navlink"), function(elem){
+    elem.addEventListener('click', smoothScroll, false)
+})
 
 var inView = function(el){
     var windowTop = getScrollTop();
