@@ -1,5 +1,3 @@
-
-
 var getHeight = function(){
     //window.innerHeight IE9+. Height (in pixels) of the browser window viewport including, if rendered, the horizontal scrollbar.
     return window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
@@ -82,8 +80,3 @@ var updateLinks = function(){
 }
 
 document.addEventListener('scroll', updateLinks)
-
-
-
-
-
