@@ -60,7 +60,12 @@ var updateLinks = function(){
     var aboutLink = document.getElementById("aboutlink")
     var projectsLink = document.getElementById("projectslink")
     var contactlink = document.getElementById("contactlink")
-    if(inView(document.getElementById("about"))) {
+
+    if(getScrollTop() + window.innerHeight + contactlink.getBoundingClientRect().height > document.body.getBoundingClientRect().height){
+        aboutLink.classList.remove("active")   
+        projectslink.classList.remove("active")
+        contactlink.classList.add("active")  
+    }else if(inView(document.getElementById("about"))) {
         aboutLink.classList.add("active")   
         projectslink.classList.remove("active")  
         contactlink.classList.remove("active")  
@@ -68,11 +73,12 @@ var updateLinks = function(){
         aboutLink.classList.remove("active") 
         projectslink.classList.add("active")  
         contactlink.classList.remove("active")  
-    }else if(inView(document.getElementById("contact"))) {
-        aboutLink.classList.remove("active")   
-        projectslink.classList.remove("active")
-        contactlink.classList.add("active")  
     }
+    // else if(inView(document.getElementById("contact"))) {
+// 
+    // }
+
+    // if()
 }
 
 document.addEventListener('scroll', updateLinks)
