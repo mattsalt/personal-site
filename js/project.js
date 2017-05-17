@@ -21,7 +21,8 @@ var smoothScroll = function(event){
     }
     
     document.body.classList.add('in-transition')
-
+    document.getElementById('navigation').style.display = 'inline';
+    
     document.body.style.WebkitTransform = "translate(0, " + -(scrollDistance) + "px)"
     document.body.style.MozTransform = "translate(0, " + -(scrollDistance) + "px)"
     document.body.style.transform = "translate(0, " + -(scrollDistance) + "px)"
@@ -30,6 +31,8 @@ var smoothScroll = function(event){
         document.body.classList.remove("in-transition")
         document.body.style.cssText = "";
         window.scrollTo(0, targetOffset)
+        document.getElementById('navigation').style.display = 'block';
+
     },  900)
 
     event.preventDefault()
@@ -72,11 +75,6 @@ var updateLinks = function(){
         projectslink.classList.add("active")  
         contactlink.classList.remove("active")  
     }
-    // else if(inView(document.getElementById("contact"))) {
-// 
-    // }
-
-    // if()
 }
 
 document.addEventListener('scroll', updateLinks)
