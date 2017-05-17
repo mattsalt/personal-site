@@ -20,20 +20,22 @@ var smoothScroll = function(event){
         scrollDistance = targetOffset - currentPosition
     }
     
-    document.body.classList.add('in-transition')
-    document.getElementById('navigation').style.display = 'inline';
-    
-    document.body.style.WebkitTransform = "translate(0, " + -(scrollDistance) + "px)"
-    document.body.style.MozTransform = "translate(0, " + -(scrollDistance) + "px)"
-    document.body.style.transform = "translate(0, " + -(scrollDistance) + "px)"
+    var scrolling = document.getElementById('scrolling')    
+    scrolling.classList.add('in-transition')    
+    scrolling.style.WebkitTransform = "translate3d(0," + -(scrollDistance) + "px,0)"
+    scrolling.style.MozTransform = "translate3d(0,"+ -(scrollDistance) + "px,0)"
+    scrolling.style.transform = "translate3d(0,"+ -(scrollDistance) + "px,0)"
 
     window.setTimeout(function(){
-        document.body.classList.remove("in-transition")
-        document.body.style.cssText = "";
-        window.scrollTo(0, targetOffset)
-        document.getElementById('navigation').style.display = 'block';
+        scrolling.classList.remove("in-transition")
+        scrolling.style.WebkitTransform = ""
+        scrolling.style.MozTransform = ""
+        scrolling.style.transform = ""
+        window.scroll(0, targetOffset)
+    },  500)
 
-    },  900)
+
+
 
     event.preventDefault()
 }
