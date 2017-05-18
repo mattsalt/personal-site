@@ -9,34 +9,35 @@ var getScrollTop = function(){
                                               : (document.documentElement || document.body.parentNode || document.body).scrollTop
 }
 
-var smoothScroll = function(event){
-    targetOffset = document.getElementById(event.target.hash.substr(1)).offsetTop;
+var scollDistanceToTarget = function(id){
+    targetOffset = document.getElementById(id).offsetTop; //distance to closest relative position parent
     currentPosition = getScrollTop();
     bodyHeight = document.body.getBoundingClientRect().height
-    targetHeight = document.getElementById(event.target.hash.substr(1)).getBoundingClientRect().height
+    targetHeight = document.getElementById(id).getBoundingClientRect().height
+    var scrollDistance
     if(currentPosition + (targetOffset - currentPosition) + window.innerHeight > bodyHeight){
         scrollDistance = (bodyHeight - window.innerHeight) - currentPosition
     }else{
         scrollDistance = targetOffset - currentPosition
     }
-    
-    var scrolling = document.getElementById('scrolling')    
-    scrolling.classList.add('in-transition')    
-    scrolling.style.WebkitTransform = "translate3d(0," + -(scrollDistance) + "px,0)"
-    scrolling.style.MozTransform = "translate3d(0,"+ -(scrollDistance) + "px,0)"
-    scrolling.style.transform = "translate3d(0,"+ -(scrollDistance) + "px,0)"
+    return scrollDistance
+}
+
+var smoothScroll = function(event){
+    var scrollDistance = scollDistanceToTarget(event.target.hash.substr(1));
+    var scrollingDiv = document.getElementById('scrolling')    
+    scrollingDiv.classList.add('in-transition')    
+    scrollingDiv.style.WebkitTransform = "translate3d(0," + -(scrollDistance) + "px,0)"
+    scrollingDiv.style.MozTransform = "translate3d(0,"+ -(scrollDistance) + "px,0)"
+    scrollingDiv.style.transform = "translate3d(0,"+ -(scrollDistance) + "px,0)"
 
     window.setTimeout(function(){
-        scrolling.classList.remove("in-transition")
-        scrolling.style.WebkitTransform = ""
-        scrolling.style.MozTransform = ""
-        scrolling.style.transform = ""
+        scrollingDiv.classList.remove("in-transition")
+        scrollingDiv.style.WebkitTransform = ""
+        scrollingDiv.style.MozTransform = ""
+        scrollingDiv.style.transform = ""
         window.scroll(0, targetOffset)
     },  500)
-
-
-
-
     event.preventDefault()
 }
 
@@ -46,13 +47,12 @@ Array.prototype.forEach.call(document.getElementsByClassName("navlink"), functio
 
 var inView = function(el){
     var windowTop = getScrollTop();
-    var windowBottom = windowTop + getHeight()
-    var elTop = el.getBoundingClientRect().top + window.pageYOffset
     var elBot = el.getBoundingClientRect().bottom + window.pageYOffset
-    if(windowTop + 100  > elBot){
+    //If the top of the window + navbar is below the bottom of the element then it is not in view.
+    if(windowTop + 100  > elBot){ 
         return false
     }
-
+    //If the top of the window is above the bottom of the element then it is in view.
     if(windowTop < elBot){
         return true
     }
@@ -63,7 +63,10 @@ var updateLinks = function(){
     var aboutLink = document.getElementById("aboutlink")
     var projectsLink = document.getElementById("projectslink")
     var contactlink = document.getElementById("contactlink")
-
+    //If the position of the top of the page + 
+    //the height of the last section + 
+    // height of the viewport is > the documents height then we are at the bottom of
+    //the page and should add the active link to the contact section
     if(getScrollTop() + window.innerHeight + contactlink.getBoundingClientRect().height > document.body.getBoundingClientRect().height){
         aboutLink.classList.remove("active")   
         projectslink.classList.remove("active")

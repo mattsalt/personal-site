@@ -1,0 +1,9 @@
+ {
+   "scripts": {
+    "start":"harp server --port 9000",
+    "compile": "harp compile",
+    "clean": "rm -r www",
+    "push": "npm run compile && bitballoon deploy www && npm run clean",
+    "deploy" : "npm run compile && ./_deploy_via_scp.sh"
+ }
+}
