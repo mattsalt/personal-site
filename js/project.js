@@ -83,3 +83,4 @@ var updateLinks = function(){
 }
 
 document.addEventListener('scroll', updateLinks)
+updateLinks()
