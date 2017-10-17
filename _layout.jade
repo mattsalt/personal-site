@@ -17,11 +17,12 @@ html
 
   body
       div.topnav#navigation
-        a#aboutlink.navlink(href="#about") About Me
-        a#projectslink.navlink(href="#projects") Projects
-        a#contactlink.navlink(href="#contact") Contact
-        a(href="https://www.linkedin.com/in/matthew-salt-4b674328/" style="float:right") Linkedin
-        a(href="https://github.com/mattsalt" style="float:right") GitHub
+        a#aboutlink(href="/index") Matthew Salt
+        a.float-right(href="https://www.linkedin.com/in/matthew-salt-4b674328/") Linkedin
+        a.float-right(href="https://github.com/mattsalt") GitHub
+        a.smoothscroll#contactlink.float-right(href="/contact") Contact
+        a.smoothscroll#projectslink.float-right(href="/projects") Projects
       div#scrolling(style="display:block;padding:45px;")
         != yield
+  !=partial("partial/_footer.jade")
   script(src="/js/project.js")
