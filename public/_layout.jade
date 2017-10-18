@@ -3,8 +3,7 @@ html
   head
     meta(name="viewport" content="initial-scale=1, maximum-scale=1")
     meta(name="description" content="Matthew Salt is a British programmer living in London escaping to the countryside whenever possible.")
-    meta(name="title" content="Matthew Salt | Software Developer and Hiker ")
-    title Matthew Salt's Programming Site
+    title= title
     link(rel="stylesheet" href="/css/style.css")
     script.
        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -20,8 +19,8 @@ html
         a#aboutlink(href="/index") Matthew Salt
         a.float-right(href="https://www.linkedin.com/in/matthew-salt-4b674328/") Linkedin
         a.float-right(href="https://github.com/mattsalt") GitHub
-        a.smoothscroll#contactlink.float-right(href="/contact") Contact
-        a.smoothscroll#projectslink.float-right(href="/projects") Projects
+        a.smoothscroll#contactlink.float-right(href="/pages/contact") Contact
+        a.smoothscroll#projectslink.float-right(href="/pages/projects") Projects
       div#scrolling(style="display:block;padding:45px;")
         != yield
   !=partial("partial/_footer.jade")
