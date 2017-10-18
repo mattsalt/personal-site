@@ -17,13 +17,9 @@ html body{
 	text-align: left;
 }
 
-.in-transition{
-    transition: transform 500ms ease-in-out
-}
-
 h1 {
 	font-size:1.4em;
-	font-weight: normal;
+	font-weight: 400;
 }
 
 h4{
@@ -36,17 +32,6 @@ a {
   	&:visited {color:darkgrey; }
   	&:hover { color:darkgrey;}
   	&:active { color:pink;}
-  	&.imagelink{
-  		float:left;
-		margin-right: 20px
-  	}
-}
-
-.bodydiv{
-	width:90%;
-	// max-width: 966px;
-	min-width: 930px;
-	margin: auto
 }
 
 div.topnav{
@@ -59,9 +44,6 @@ div.topnav{
     height: 50px
 }
 
-.topnav #aboutlink{
-	  float: left;
-}
 .topnav a{
   display: block;
   color: #363636;
@@ -77,21 +59,34 @@ div.topnav{
     	background-color: #ddd;
   		color: black;
     }
-
 }
 
-/* Margin/Padding hack to account for scroll bar when nav scrolling*/
-
-#about{
-	margin-top: -40px;
-	// padding-top: 40px;
+.bodydiv{
+  padding:45px;
+  width:80%;
+  // max-width: 966px;
+  min-width: 930px;
+  margin: auto
 }
 
-#projects{
-	margin-top: -40px;
+.pagediv{
+  width:1080px;
+  margin:auto
 }
 
-/*Selected projects styles*/
+.profile-img{
+   margin:auto;
+   padding:25px;
+   border-radius:35px
+}
+.project-gallery{
+  width:1080px;
+  margin:30px auto auto auto;
+  align:center;
+  display:flex;
+  flex-direction:column
+}
+
 .my-wrapper{
 	border:1px solid lightgrey;
 	width: $caption-width;
@@ -110,16 +105,8 @@ div.topnav{
     transform: scale(1.1);
     cursor: pointer;
     z-index: 2;
-    /*box-shadow: 0px 0px 50px #b5b5b5; */
+    box-shadow: 0px 0px 50px #b5b5b5; 
   }
-
-.floatleft{
-	float:left;
-}
-
-.float-right{
-	float:right;
-}
 
 div.caption{
 	color:$site-colour;
@@ -134,10 +121,16 @@ p.caption-body{
 	font-size: $body-text-size;
 }
 
-.text-centered{
-	text-align: center;
+.flexy{
+  display:flex;
 }
-.column {
+.flexy-row-even{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-evenly;
+}
+
+.flexy-column {
   display: block;
   flex-basis: 0;
   flex-grow: 1;
@@ -145,25 +138,16 @@ p.caption-body{
   padding: 0.75rem; 
 }
 
-.flexy-row-even{
-  display:flex;
-  flex-direction:row;
-  justify-content:space-evenly;
+.float-left{
+  float:left;
 }
 
-.inline-block{
-  display: inline-block;
+.float-right{
+  float:right;
 }
 
-.project-gallery{
-  width:1080px;
-  margin:30px auto auto auto;
-  align:center;
-  display:flex;
-  flex-direction:column
+.text-centered{
+  text-align: center
 }
 
-.pagediv{
-  width:1080px;
-  margin:auto
-}
+
