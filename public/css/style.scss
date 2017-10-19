@@ -64,12 +64,10 @@ div.topnav{
 .bodydiv{
   padding:25px;
   width:80%;
-  min-width: 930px;
   margin: auto
 }
 
 .pagediv{
-  width:1080px;
   margin:auto
 }
 
@@ -79,7 +77,6 @@ div.topnav{
    border-radius:35px
 }
 .project-gallery{
-  width:1080px;
   margin:30px auto auto auto;
   align:center;
   display:flex;
@@ -93,7 +90,9 @@ div.topnav{
 	margin:10px
 }
 
-.my-wrapper:hover {
+//Add animated highlight and shadow on desktops onlu
+@media screen and (min-width: 550px){
+  .my-wrapper:hover {
     -webkit-transition: all 100ms ease-in;
     -webkit-transform: scale(1.1);
     -ms-transition: all 100ms ease-in;
@@ -106,6 +105,8 @@ div.topnav{
     z-index: 2;
     box-shadow: 0px 0px 50px #b5b5b5; 
   }
+}
+
 
 div.caption{
 	color:$site-colour;
@@ -150,4 +151,55 @@ p.caption-body{
   text-align: center
 }
 
+@media screen and (max-width: 600px) {
+  .flexy-row-even{
+    display: block;
+    flex:none;
+    flex-wrap:wrap;
+  }
 
+  .my-wrapper{
+    margin:10px auto;
+  }
+
+  .bodydiv{
+    width: 100%;
+  }
+
+  div.topnav{
+    width: 100%;
+  }
+  .flexy{
+    flex:none;
+    display:block;
+  }
+  .profile-img{
+    padding:0px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .flexy-row-even{
+    flex-wrap:wrap;
+  }
+
+  .bodydiv{
+    width: 100%;
+    box-sizing:border-box;
+  }
+
+  div.topnav{
+    width: 100%;
+  }
+
+  .flexy{
+    flex:none;
+    display:block;
+  }
+  .profile-img{
+    width: 400px;
+    margin:auto;
+    display: block;
+  }
+
+}
