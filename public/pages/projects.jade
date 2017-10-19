@@ -16,14 +16,20 @@ div.bodydiv
 
       div.my-wrapper.floatleft
         a(href="https://github.com/mattsalt/clockly")
-           img(src='/img/clocklyanalog.png' height="216" width="300" title="clockly analog display")
-           div.caption
-             span.caption-header Clockly
-             p.caption-body macOS menu bar application to show the current time in multiple locations.   
+          if environment == "production"
+            img(src='https://res.cloudinary.com/ceresstop/image/upload/v1508404466/clocklyanalog_mtkaiy.png' height="216" width="300" title="clockly analog display")
+          else
+            img(src='/img/clocklyanalog.png' height="216" width="300" title="clockly analog display")
+          div.caption
+            span.caption-header Clockly
+            p.caption-body macOS menu bar application to show the current time in multiple locations.   
    
       div.my-wrapper.floatleft
        a(href="https://www.npmjs.com/package/national-rail-darwin")
-        img(src='/img/natraildar.png' height="216" width="300" title="national-rail-darwin npm home page")
+         if environment == "production"
+           img(src='https://res.cloudinary.com/ceresstop/image/upload/v1493904219/natraildar_bgtltz.png' height="216" width="300" title="national-rail-darwin npm home page")
+         else
+           img(src='/img/natraildar.png' height="216" width="300" title="national-rail-darwin npm home page")
        div.caption
          span.caption-header National Rail Darwin module
          p.caption-body js module for talking to National Rail's SOAP api. Returns JSON objects.
@@ -31,38 +37,53 @@ div.bodydiv
     div.flexy-row-even
       div.my-wrapper.floatleft
         a(href="https://itunes.apple.com/us/app/train-board/id1234103097?ls=1&mt=8")
-           img(src='/img/trainboard.png' height="216" width="300" title="TrainBoard screenshot")
-           div.caption
-             span.caption-header TrainBoard
-             br
-             p.caption-body iOS app showing live train departure information between two stations.
+          if environment == "production"
+            img(src='https://res.cloudinary.com/ceresstop/image/upload/v1508405098/trainboard_n79s1u.png' height="216" width="300" title="TrainBoard screenshot")
+          else  
+            img(src='/img/trainboard.png' height="216" width="300" title="TrainBoard screenshot")
+          div.caption
+            span.caption-header TrainBoard
+            br
+            p.caption-body iOS app showing live train departure information between two stations.
       
       div.my-wrapper.floatleft
-       a(href="https://www.mytravelupdates.co.uk")
-        img(src='/img/mytravupscreenshot.png' height="216" width="300" title="MyTravelUpdates screenshot")
-        div.caption
-         span.caption-header mytravelupdates
-         p.caption-body Provides scheduled train status updates for a specific trains via email or twitter direct messages.
+        a(href="https://www.mytravelupdates.co.uk")
+          if environment == "production"
+            img(src='https://res.cloudinary.com/ceresstop/image/upload/v1493904213/mytravupscreenshot_q0cx75.png' height="216" width="300" title="MyTravelUpdates screenshot")
+          else  
+            img(src='/img/mytravupscreenshot.png' height="216" width="300" title="MyTravelUpdates screenshot")
+          div.caption
+            span.caption-header mytravelupdates
+            p.caption-body Provides scheduled train status updates for a specific trains via email or twitter direct  messages.
       
 
       div.my-wrapper.floatleft
         a(href="https://chrome.google.com/webstore/detail/open-link-in-duplicate-ta/decochkhfdfamopdemciggmhlgdcdndm")
-           img(src='/img/open-link-in-duplicate.png' height="216" width="300" title="open-link-in-duplicate")
-           div.caption
-             span.caption-header Open Link in Duplicate Tab
-             p.caption-body Extension for the Chrome browser that allows you to open a link in a new tab with the current tabs browsing history.
+          if environment == "production"
+            img(src='https://res.cloudinary.com/ceresstop/image/upload/v1493904179/open-link-in-duplicate_y3y2u9.png' height="216" width="300" title="open-link-in-duplicate")
+          else  
+            img(src='/img/open-link-in-duplicate.png' height="216" width="300" title="open-link-in-duplicate")
+          div.caption
+            span.caption-header Open Link in Duplicate Tab
+            p.caption-body Extension for the Chrome browser that allows you to open a link in a new tab with the current tabs browsing history.
 
     div.flexy-row-even
       div.my-wrapper.floatleft
         a(href="https://itunes.apple.com/us/app/btl-profit-calculator/id1195428899?ls=1&mt=8")
-           img(src='/img/btlcalc.png' height="216" width="300" title="national-rail-darwin npm home page")
-           div.caption
-             span.caption-header BTL Calculator
-             p.caption-body Simple iOS app to estimate the profit on a rented property.
+          if environment == "production"
+            img(src='http://res.cloudinary.com/ceresstop/image/upload/v1508403875/btlcalc_xcx4gn.jpg' height="216" width="300" title="national-rail-darwin npm home page")
+          else
+            img(src='/img/btlcalc.png' height="216" width="300" title="national-rail-darwin npm home page")
+          div.caption
+            span.caption-header BTL Calculator
+            p.caption-body Simple iOS app to estimate the profit on a rented property.
 
       div.my-wrapper.floatleft
-         a(href="https://github.com/mattsalt/AnalogClock")
-           img(src='/img/analogclock.png' height="216" width="300" title="analog clock")
-           div.caption
-             span.caption-header Analog Clock
-             p.caption-body Swift 3 class for a customizable analog clock face for macOS and iOS.
+        a(href="https://github.com/mattsalt/AnalogClock")
+          if environment == "production"
+            img(src='https://res.cloudinary.com/ceresstop/image/upload/v1493904229/analogclock_jc5wwa.png' height="216" width="300" title="analog clock")
+          else  
+            img(src='/img/analogclock.png' height="216" width="300" title="analog clock")
+          div.caption
+            span.caption-header Analog Clock
+            p.caption-body Swift 3 class for a customizable analog clock face for macOS and iOS.
