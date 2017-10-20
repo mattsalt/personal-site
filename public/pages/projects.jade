@@ -8,7 +8,10 @@ div.bodydiv
     div.flexy-row-even
       div.my-wrapper.floatleft
         a(href="https://itunes.apple.com/us/app/search-when-home/id1273545274?ls=1&mt=8")
-           img(src='/img/SearchWhenHome.png' height="216" width="300" title="Search When Home Main Page")
+           if environment == "production"
+             img(src="https://res.cloudinary.com/ceresstop/image/upload/v1508486838/SearchWhenHome_rw6xdb.png")
+           else
+             img(src='/img/SearchWhenHome.png' height="216" width="300" title="Search When Home Main Page")
            div.caption
              span.caption-header Search When Home
              br
@@ -17,7 +20,7 @@ div.bodydiv
       div.my-wrapper.floatleft
         a(href="https://github.com/mattsalt/clockly")
           if environment == "production"
-            img(src='https://res.cloudinary.com/ceresstop/image/upload/v1508404466/clocklyanalog_mtkaiy.png' height="216" width="300" title="clockly analog display")
+            img(src='https://res.cloudinary.com/ceresstop/image/upload/v1508486535/clocklyanalog_mtkaiy_cwkudq.png' height="216" width="300" title="clockly analog display")
           else
             img(src='/img/clocklyanalog.png' height="216" width="300" title="clockly analog display")
           div.caption
@@ -27,7 +30,7 @@ div.bodydiv
       div.my-wrapper.floatleft
        a(href="https://www.npmjs.com/package/national-rail-darwin")
          if environment == "production"
-           img(src='https://res.cloudinary.com/ceresstop/image/upload/v1493904219/natraildar_bgtltz.png' height="216" width="300" title="national-rail-darwin npm home page")
+           img(src='https://res.cloudinary.com/ceresstop/image/upload/v1508486972/natraildar_qpl0za.png' height="216" width="300" title="national-rail-darwin npm home page")
          else
            img(src='/img/natraildar.png' height="216" width="300" title="national-rail-darwin npm home page")
        div.caption
@@ -38,7 +41,7 @@ div.bodydiv
       div.my-wrapper.floatleft
         a(href="https://itunes.apple.com/us/app/train-board/id1234103097?ls=1&mt=8")
           if environment == "production"
-            img(src='https://res.cloudinary.com/ceresstop/image/upload/v1508405098/trainboard_n79s1u.png' height="216" width="300" title="TrainBoard screenshot")
+            img(src='https://res.cloudinary.com/ceresstop/image/upload/v1508486798/trainboard_t0xta5.png' height="216" width="300" title="TrainBoard screenshot")
           else  
             img(src='/img/trainboard.png' height="216" width="300" title="TrainBoard screenshot")
           div.caption
@@ -49,7 +52,7 @@ div.bodydiv
       div.my-wrapper.floatleft
         a(href="https://www.mytravelupdates.co.uk")
           if environment == "production"
-            img(src='https://res.cloudinary.com/ceresstop/image/upload/v1493904213/mytravupscreenshot_q0cx75.png' height="216" width="300" title="MyTravelUpdates screenshot")
+            img(src='https://res.cloudinary.com/ceresstop/image/upload/v1508486974/mytravupscreenshot_jbaj5l.png' height="216" width="300" title="MyTravelUpdates screenshot")
           else  
             img(src='/img/mytravupscreenshot.png' height="216" width="300" title="MyTravelUpdates screenshot")
           div.caption
@@ -60,7 +63,7 @@ div.bodydiv
       div.my-wrapper.floatleft
         a(href="https://chrome.google.com/webstore/detail/open-link-in-duplicate-ta/decochkhfdfamopdemciggmhlgdcdndm")
           if environment == "production"
-            img(src='https://res.cloudinary.com/ceresstop/image/upload/v1493904179/open-link-in-duplicate_y3y2u9.png' height="216" width="300" title="open-link-in-duplicate")
+            img(src='https://res.cloudinary.com/ceresstop/image/upload/v1508488313/open-link-in-duplicate_fasarq.png' height="216" width="300" title="open-link-in-duplicate")
           else  
             img(src='/img/open-link-in-duplicate.png' height="216" width="300" title="open-link-in-duplicate")
           div.caption
@@ -81,7 +84,7 @@ div.bodydiv
       div.my-wrapper.floatleft
         a(href="https://github.com/mattsalt/AnalogClock")
           if environment == "production"
-            img(src='https://res.cloudinary.com/ceresstop/image/upload/v1493904229/analogclock_jc5wwa.png' height="216" width="300" title="analog clock")
+            img(src='https://res.cloudinary.com/ceresstop/image/upload/v1508487035/analogclock_wy2la3.png' height="216" width="300" title="analog clock")
           else  
             img(src='/img/analogclock.png' height="216" width="300" title="analog clock")
           div.caption

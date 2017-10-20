@@ -1,6 +1,9 @@
 div.bodydiv.flexy
     div
-      img.profile-img(src="/img/profile2.jpg")
+      if environment == "production"
+        img.profile-img(src="https://res.cloudinary.com/ceresstop/image/upload/v1508490385/profile2_d7p5kk.jpg")
+      else
+        img.profile-img(src="/img/profile2.jpg")
     div.flexy-column(style="text-align:justify")
       p Hi there, I'm Matthew Salt. I’m a London based developer who writes software for a living and for fun. 
 
