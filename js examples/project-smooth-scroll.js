@@ -41,7 +41,7 @@ var smoothScroll = function(event){
     event.preventDefault()
 }
 
-Array.prototype.forEach.call(document.getElementsByClassName("navlink"), function(elem){
+Array.prototype.forEach.call(document.getElementsByClassName("smoothscroll"), function(elem){
     elem.addEventListener('click', smoothScroll, false)
 })
 
@@ -59,28 +59,28 @@ var inView = function(el){
 
 }
 
-var updateLinks = function(){
-    var aboutLink = document.getElementById("aboutlink")
-    var projectsLink = document.getElementById("projectslink")
-    var contactlink = document.getElementById("contactlink")
-    //If the position of the top of the page + 
-    //the height of the last section + 
-    // height of the viewport is > the documents height then we are at the bottom of
-    //the page and should add the active link to the contact section
-    if(getScrollTop() + window.innerHeight + contactlink.getBoundingClientRect().height > document.body.getBoundingClientRect().height){
-        aboutLink.classList.remove("active")   
-        projectslink.classList.remove("active")
-        contactlink.classList.add("active")  
-    }else if(inView(document.getElementById("about"))) {
-        aboutLink.classList.add("active")   
-        projectslink.classList.remove("active")  
-        contactlink.classList.remove("active")  
-    } else if(inView(document.getElementById("projects"))) {
-        aboutLink.classList.remove("active") 
-        projectslink.classList.add("active")  
-        contactlink.classList.remove("active")  
-    }
-}
+// var updateLinks = function(){
+//     var aboutLink = document.getElementById("aboutlink")
+//     var projectsLink = document.getElementById("projectslink")
+//     var contactlink = document.getElementById("contactlink")
+//     //If the position of the top of the page + 
+//     //the height of the last section + 
+//     // height of the viewport is > the documents height then we are at the bottom of
+//     //the page and should add the active link to the contact section
+//     if(getScrollTop() + window.innerHeight + contactlink.getBoundingClientRect().height > document.body.getBoundingClientRect().height){
+//         aboutLink.classList.remove("active")   
+//         projectslink.classList.remove("active")
+//         contactlink.classList.add("active")  
+//     }else if(inView(document.getElementById("about"))) {
+//         aboutLink.classList.add("active")   
+//         projectslink.classList.remove("active")  
+//         contactlink.classList.remove("active")  
+//     } else if(inView(document.getElementById("projects"))) {
+//         aboutLink.classList.remove("active") 
+//         projectslink.classList.add("active")  
+//         contactlink.classList.remove("active")  
+//     }
+// }
 
-document.addEventListener('scroll', updateLinks)
-updateLinks()
+// document.addEventListener('scroll', updateLinks)
+// updateLinks()
