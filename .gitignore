@@ -1,5 +1,5 @@
 www/
 *.log
 *.pem
-.bitballon
+.bitballoon
 _deploy_via_scp.sh
